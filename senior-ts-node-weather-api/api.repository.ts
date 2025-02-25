@@ -23,7 +23,7 @@ export class ApiRepository {
             const data = await this.getWeatherData(lat, long)
             return {
                 temp: data.current.temperature_2m,
-                elevation: data.current.elevation,
+                elevation: data.elevation,
                 latitude: data.latitude,
                 longitude: data.longitude,
             }
