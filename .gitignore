@@ -3,3 +3,6 @@ node_modules/
 
 .DS_Store
 **/.DS_Store
+
+./senior-ts-node-weather-api/libs/api.repository.ts
+./senior-ts-node-efficient-render/libs/api.service.ts
