@@ -1,4 +1,4 @@
-import { ApiRepository } from "./api.repository";
+import { ApiRepository } from "./libs/api.repository.js";
 
 const apiRepository = new ApiRepository();
 
