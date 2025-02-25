@@ -1,0 +1,17 @@
+{
+  "name": "senior-ts-node-weather-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @digitak/esrun ./index.ts"
+  },
+  "author": "Goldbach",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@digitak/esrun": "^3.2.26"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5"
+  }
+}
