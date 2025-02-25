@@ -1,5 +1,7 @@
 export class ApiRepository {
 
+    private isBrokenValue = () => Math.random() > (1 / 2)
+
     private getWeatherData = async (lat: number, long: number) => {
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&current=temperature_2m`
         const response = await fetch(url)
@@ -11,9 +13,9 @@ export class ApiRepository {
        try {
             await new Promise(resolve => setTimeout(resolve, 100))
             const data = await this.getWeatherData(lat, long)
-            return { temp: Math.random() > 0.5 ? data.current.temperature_2m : data.current.temperature_2m.toString() }
+            return { temp: this.isBrokenValue() ? data.current.temperature_2m : data.current.temperature_2m.toString() }
        } catch {
-            const temp = Math.random() > 0.5 ? Math.round(Math.random() * 30) :  Math.round(Math.random() * 30).toString()
+            const temp = this.isBrokenValue() ? Math.round(Math.random() * 30) :  Math.round(Math.random() * 30).toString()
             return { temp: temp }
        }
     }

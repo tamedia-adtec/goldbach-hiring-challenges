@@ -40,6 +40,7 @@ exports.ApiRepository = void 0;
 var ApiRepository = /** @class */ (function () {
     function ApiRepository() {
         var _this = this;
+        this.isBrokenValue = function () { return Math.random() > (1 / 2); };
         this.getWeatherData = function (lat, long) { return __awaiter(_this, void 0, void 0, function () {
             var url, response, data;
             return __generator(this, function (_a) {
@@ -68,10 +69,10 @@ var ApiRepository = /** @class */ (function () {
                         return [4 /*yield*/, this.getWeatherData(lat, long)];
                     case 2:
                         data = _b.sent();
-                        return [2 /*return*/, { temp: Math.random() > 0.5 ? data.current.temperature_2m : data.current.temperature_2m.toString() }];
+                        return [2 /*return*/, { temp: this.isBrokenValue() ? data.current.temperature_2m : data.current.temperature_2m.toString() }];
                     case 3:
                         _a = _b.sent();
-                        temp = Math.random() > 0.5 ? Math.round(Math.random() * 30) : Math.round(Math.random() * 30).toString();
+                        temp = this.isBrokenValue() ? Math.round(Math.random() * 30) : Math.round(Math.random() * 30).toString();
                         return [2 /*return*/, { temp: temp }];
                     case 4: return [2 /*return*/];
                 }
