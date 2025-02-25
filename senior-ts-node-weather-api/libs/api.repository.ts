@@ -1,4 +1,4 @@
-export class ApiRepository {
+export default class ApiRepository {
 
     private isBrokenValue = () => Math.random() > (1 / 2)
 

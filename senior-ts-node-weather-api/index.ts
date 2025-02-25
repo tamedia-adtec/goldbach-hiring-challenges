@@ -1,5 +1,8 @@
-import { ApiRepository } from "./libs/api.repository.js";
-
+/**
+ * External library providing weather data from two different services
+ * This libary has not been parsed to TypeScript yet
+ */
+const ApiRepository = require("./libs/api.repository.js").default;
 const apiRepository = new ApiRepository();
 
 const locations = [
@@ -17,8 +20,8 @@ const locations = [
 
 apiRepository
   .getWeatherFromServiceA(locations[0].lat, locations[0].long)
-  .then((data) => console.log(data));
+  .then((data: any) => console.log(data));
 
 apiRepository
   .getWeatherFromServiceB(locations[1].lat, locations[1].long)
-  .then((data) => console.log(data));
+  .then((data: any) => console.log(data));
