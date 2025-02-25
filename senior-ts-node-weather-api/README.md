@@ -12,7 +12,7 @@ The file `index.ts` imports a small repository that fetches weather data from tw
 
 - **Multiple APIs**: Each API returns weather data in a different shape.
 - **TypeScript Safety**: The underlying library is not typed, so you must ensure type safety in your own code.
-- **Consistent Format**: The function(s) you create should return the temperature data together with the city ID in a unified format for all requested cities.
+- **Consistent Format**: The function(s) you create should return the temperature data in a unified format for all requested cities.
 - **Documentation**: Briefly explain your decisions (e.g., which API format you prefer, how you handle discrepancies, etc.).
 
 ---
@@ -29,7 +29,7 @@ The file `index.ts` imports a small repository that fetches weather data from tw
    - Ensure the final data is well-typed and consistent.
 
 3. **Return & Log**  
-   - Gather temperature data for each city in the predefined `cities` array.
+   - Gather temperature data for each city in the predefined `locations` array.
    - Return the results in a consistent format (e.g., an array of objects or a mapping from city to temperature).
    - Log the final output to the console.
 
