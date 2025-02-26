@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npx @digitak/esrun ./index.ts",
+    "start": "npx tsx ./index.ts",
     "build-and-obfuscate": "tsc ./libs/api.repository.ts --outDir ./libs && npx javascript-obfuscator ./libs/api.repository.js --output ./libs/api.repository.js"
   },
   "author": "Goldbach",
