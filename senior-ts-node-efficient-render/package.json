@@ -3,15 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npx @digitak/esrun ./index.ts",
-    "build-and-obfuscate": "tsc --project tsconfig.json && javascript-obfuscator ./libs/api.repository.js --output ./libs/api.repository.js"
+    "start": "npx tsx ./index.ts",
+    "build-and-obfuscate": "tsc ./libs/api.repository.ts --outDir ./libs && npx javascript-obfuscator ./libs/api.repository.js --output ./libs/api.repository.js"
   },
   "author": "Goldbach",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "@digitak/esrun": "^3.2.26"
-  },
   "devDependencies": {
     "@types/node": "^22.13.5",
     "javascript-obfuscator": "^4.1.1",
