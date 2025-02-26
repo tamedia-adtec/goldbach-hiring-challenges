@@ -25,29 +25,30 @@ const apiRepository = new ApiRepository();
 - **Optimized Loading**: Prioritize displaying site names and display names first, then compute additional stats asynchronously.
 - **Consistent Format**: Ensure a uniform approach to handling API responses.
 - **Documentation**: Briefly explain your approach, trade-offs, and improvements.
+- **Requests in Stats**: The total number of requests is part of the stats object in site details.
 
 ---
 
 ## Requirements
 
 1. **Investigate the API Responses**
-  - Familiarize yourself with the structure of each API response.
-  - Identify potential pitfalls (e.g., missing or undefined values).
+   - Familiarize yourself with the structure of each API response.
+   - Identify potential pitfalls (e.g., missing or undefined values).
 
 2. **Create a Function**
-  - Implement a function (or multiple functions) to efficiently fetch site names, display names, and compute request totals.
-  - Prioritize displaying names and display names as soon as they are available.
-  - Fetch additional stats asynchronously to avoid UI blocking.
+   - Implement a function (or multiple functions) to efficiently fetch site names, display names, and compute request totals.
+   - Prioritize displaying names and display names as soon as they are available.
+   - Fetch additional stats asynchronously to avoid UI blocking.
 
 3. **Return & Display**
-  - Gather data from the API and ensure a smooth user experience.
-  - Return results in a consistent format (e.g., an array of objects containing name, displayName, and total requests).
-  - Display the results in a browser UI if possible; otherwise, log them to the console.
+   - Gather data from the API and ensure a smooth user experience.
+   - Return results in a consistent format (e.g., an array of objects containing name, displayName, and total requests).
+   - Display the results in a browser UI if possible; otherwise, log them to the console.
 
 4. **Document Your Decisions**
-  - Explain your approach (in code comments or a separate doc).
-  - Describe how API responses are handled and why certain decisions were made.
-  - Outline the structure of your returned data.
+   - Explain your approach (in code comments or a separate doc).
+   - Describe how API responses are handled and why certain decisions were made.
+   - Outline the structure of your returned data.
 
 ---
 
